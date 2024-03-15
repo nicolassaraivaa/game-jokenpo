@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev JokenPô</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/pedra.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+</head>
+<h1>JOKENPÔ</h1>
+
+<body>
+    <main class="conteiner">
+        <p class="score">Usuário<span class="scoreboard"> <span id="human-score">0</span> X <span
+                    id="machine-score">0</span> </span>Máquina</p>
+
+        <section class="top-container">
+            <article class="article-top">
+                <div class="choose">
+                    Sua escolha
+                    <img src="assets/paper.png" alt="logo-paper" class="logo-choose" id="logo-human">
+                </div>
+                <button class="button-clear" onclick="clearNumber()">
+                    <img src="assets/reset.png" alt="logo-reset" class="logo-reset">
+                    Reiniciar
+                </button>
+                <div class="choose">
+                    Máquina
+                    <img src="assets/stone.png" alt="logo-stone" class="logo-choose" id="logo-machine">
+                </div>
+            </article>
+            <p class="result score">Faça sua escolha. Boa sorte!</p>
+        </section>
+
+
+        <section class="bottom-container">
+            <div class="div-buttons">
+
+                <button id="stone" onclick="playHuman('stone')" class="buttons">
+                    <img src="assets/stone.png" alt="logo-stone"
+                        class="img-buttons">
+                </button >
+
+                <button id="paper" onclick="playHuman('paper')" class="buttons">
+                    <img src="assets/paper.png" alt="logo-paper"
+                        class="img-buttons">
+                </button>
+
+                <button id="scissors" onclick="playHuman('scissors')" class="buttons">
+                    <img src="assets/scissors.png" alt="logo-scissors"
+                        class="img-buttons">
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+    <div class="shadow">
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
