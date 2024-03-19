@@ -16,17 +16,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
 
 </head>
-<h1>JOKENPÔ</h1>
-
 <body>
+    <header>
+        <h1>JOKENPÔ</h1>
+    </header>
+    
     <main class="conteiner">
-        <p class="score">Usuário<span class="scoreboard"> <span id="human-score">0</span> X <span
-                    id="machine-score">0</span> </span>Máquina</p>
-
+        <div class="score">
+            <h3 id="chosen-name">Usuário</h3>
+            <div>
+                <h2 class="scoreboard">
+                    <span id="human-score">0</span>
+                    x
+                    <span id="machine-score">0</span>
+                </h2>
+            </div>
+            <h3 id="chosen-opponent">Máquina</h3>
+        </div>
         <section class="top-container">
             <article class="article-top">
                 <div class="choose">
-                    Sua escolha
+                    <p id="choosen-your">Sua escolha</p>
                     <img src="assets/paper.png" alt="logo-paper" class="logo-choose" id="logo-human">
                 </div>
                 <button class="button-clear" onclick="clearNumber()">
@@ -34,7 +44,7 @@
                     Reiniciar
                 </button>
                 <div class="choose">
-                    Máquina
+                    <p>Máquina</p>
                     <img src="assets/stone.png" alt="logo-stone" class="logo-choose" id="logo-machine">
                 </div>
             </article>
@@ -46,25 +56,54 @@
             <div class="div-buttons">
 
                 <button id="stone" onclick="playHuman('stone')" class="buttons">
-                    <img src="assets/stone.png" alt="logo-stone"
-                        class="img-buttons">
-                </button >
+                    <img src="assets/stone.png" alt="logo-stone" class="img-buttons">
+                </button>
 
                 <button id="paper" onclick="playHuman('paper')" class="buttons">
-                    <img src="assets/paper.png" alt="logo-paper"
-                        class="img-buttons">
+                    <img src="assets/paper.png" alt="logo-paper" class="img-buttons">
                 </button>
 
                 <button id="scissors" onclick="playHuman('scissors')" class="buttons">
-                    <img src="assets/scissors.png" alt="logo-scissors"
-                        class="img-buttons">
+                    <img src="assets/scissors.png" alt="logo-scissors" class="img-buttons">
                 </button>
 
             </div>
         </section>
 
     </main>
-    <div class="shadow">
+    <footer>
+        <h3 class="author">
+            Copyright © 2024 - Desenvolvido por  
+             <a href="https://www.linkedin.com/in/nicolassaraivaa/" target="_blank">Nicolas Saraiva</a>
+        </h3>
+    </footer>
+   <div class="shadow">
+        <div class="form">
+            <label for="username">
+                <h3>Quem está jogando?</h3>
+            </label>
+            <input type="text" name="username" id="username" placeholder="Digite seu nome" maxlength="15" autocomplete="off" required>
+            <h3>Escolha seu oponente:</h3>
+            <div class="user-opponent">
+                <button class="button-player transition-opacity" id="logo-alexa" onclick="opponent('Alexa')" >                   
+                    <img src="assets/alexa.png" alt="logo-alexa" class="img-player">
+                    Alexa
+                </button>
+                <button class="button-player" id="logo-chatGPT" onclick="opponent('ChatGPT')">
+                    <img src="assets/chatGPT.png" alt="logo-chatGPT" class="img-player" >
+                    ChatGPT
+                </button>
+                <button class="button-player" id="logo-devClub" onclick="opponent('DevClub GPT')">
+                    <img src="assets/devclubGPT.png" alt="logo-devClub" class="img-player">
+                    DevClub GPT
+                </button>
+                <button class="button-player" id="logo-siri" onclick="opponent('Siri')">
+                    <img src="assets/siri.png" alt ="logo-siri" class="img-player">
+                    Siri
+                </button>
+            </div>
+            <input type="submit" value="Começar" class="button-start" onclick="hideDivShadow()" >
+        </div>
     </div>
 </body>
 <script src="script.js"></script>

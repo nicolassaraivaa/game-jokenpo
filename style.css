@@ -9,6 +9,13 @@
 body {
     background-image: url(assets/bg.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -23,12 +30,12 @@ h1 {
 }
 
 main {
-    margin-top: 100px;
+    margin-top: -50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
+    padding: 48px;
 }
 
 .article-top {
@@ -39,17 +46,20 @@ main {
     margin: 20px 0;
 }
 
-.score{
-    text-align: center;
-    font-size: 20px;
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
     color: #403E8C;
     font-weight: 600;
 }
 
-.scoreboard{
+.scoreboard {
     font-size: 40px;
     color: black;
     font-weight: 500;
+    margin: 0 10px;
 }
 
 .choose {
@@ -65,7 +75,7 @@ main {
 
 }
 
-.logo-choose{
+.logo-choose {
     width: 55px;
     margin-top: 3px;
     visibility: hidden;
@@ -83,7 +93,7 @@ main {
     color: #403E8C;
     background-color: white;
     cursor: pointer;
-    
+
 }
 
 .logo-reset {
@@ -92,30 +102,235 @@ main {
     top: 5px;
 }
 
-.div-buttons{
+.div-buttons {
     display: flex;
     gap: 30px;
     margin-top: 130px;
-    
+
 }
 
 .img-buttons {
-    width: 170px;
+    width: 150px;
+    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.buttons{
+.buttons {
     border: solid 1px rgba(0, 0, 0, 0.384);
     border-radius: 100px;
 }
 
-.shadow{
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A5FA5;
+    height: 70px;
+    color: #dee6ff;
+    font-size: small;
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #eaeaeae1;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
-    backdrop-filter: blur(6px); 
+    backdrop-filter: blur(6px);
+}
+
+.form {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-opponent {
+    display: flex;
+    gap: 10px;
+}
+
+#username {
+    background-color: #F9F9F9;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+    border: solid 1.5px #403E8C;
+    border-radius: 10px;
+    width: 240px;
+    color: #403E8C;
+    outline: none;
+    margin: 12px 0 35px;
+
+}
+
+#username::placeholder {
+    color: #413e8ca6;
+}
+
+.button-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: solid 1.5px #403E8C;
+    font-size: 18px;
+    color: #403E8C;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#logo-alexa {
+    width: 100px;
+}
+
+#logo-chatGPT {
+    width: 130px;
+}
+
+#logo-devClub {
+    width: 165px;
+}
+
+#logo-siri {
+    width: 85px;
+}
+
+.img-player {
+    width: 30px;
+}
+
+.button-start {
+    padding: 17px 25px;
+    font-size: 19px;
+    text-transform: uppercase;
+    background-color: #403E8C;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-start:hover {
+    background-color: #0A5FA5;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 680px) and (orientation: portrait) {
+    main {
+        margin-top: -15px;
+    }
+
+    body {
+        background-image: linear-gradient(to bottom, #feffffe0, #edf6ff10), url(assets/bg.jpg);
+        background-size: auto;
+        background-position: right;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .div-buttons {
+        width: 335px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 65px;
+    }
+
+    footer {
+        height: 87px;
+    }
+
+    .author{
+        font-size:12px;
+    }
+    .user-opponent {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .shadow {
+        height: 135%;
+    }
+
+    .form{
+        position: relative;
+        bottom: 110px;
+    }
+}
+
+@media screen and (max-width: 385px) and (orientation: portrait) {
+
+    .top-container {
+        width: 334px;
+    }
+
+    .scoreboard {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 321px) and (orientation: portrait) {
+
+    body {
+        background-repeat: repeat;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .top-container {
+
+        width: 305px;
+
+    }
+
+    .score {
+        font-size: 14px;
+    }
+
+    #choosen-your {
+        font-size: 10px;
+    }
+
+    .img-buttons {
+        width: 70px;
+        padding: 0;
+
+    }
+
+    footer {
+        display: none;
+    }
+
+    .shadow {
+        width: 115%;
+    }
 }
 
