@@ -151,7 +151,7 @@ a:hover {
     height: 100%;
     position: absolute;
     top: 0;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(15px);
 }
 
 .form {
